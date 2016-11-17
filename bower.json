@@ -10,5 +10,12 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "authors": [
+    "Long Pham"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
 }
