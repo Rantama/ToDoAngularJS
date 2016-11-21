@@ -1,0 +1,11 @@
+<div class='container2' ng-repeat="note in notes">
+    <div class="item">
+        <h2>{{note.title}}</h2>
+        <p>{{note.description}}</p>
+        <p>created on: {{note.date}}</p>
+        <p>edited on: {{note.editDate}}</p>
+        <button ng-click="edit(note)">edit</button>
+        <button ng-click="deleteNote(note)">remove</button>
+    </div>
+
+</div>

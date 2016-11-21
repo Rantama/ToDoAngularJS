@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="todoApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ToDo Note AngularJs</title>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-resource/angular-resource.js"></script>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="./css/main.css" rel="stylesheet"/>
+    <script src="./main.js"></script>
+    <script src="./app/service.js"></script>
+    <script src="./app/controller.js"></script>
+
+
+
 </head>
 <body>
+  <div>
+    <header>
+        <p>
+    <span><button class="addbtn" ng-click="addNewNote">add</button></span><br/><br/>
+        </p>
+    </header>
+    <div class="form">
+
+      <label>Title</label><br/>
+      <input type="text" ng-model="title.note" class="form-control"placeholder="Title"></input><br/>
+      <label>Description</label><br/>
+      <textarea class="form-control" id="description" ng-model="description.note" placeholder="description"></textarea>
+      <button class="btn" ng-click="saveNote(note)">Save</button>
+      <button class="btn" ng-click="cancel()">Cancel</button>
+    </div>
+
+  </div>
+  <div ui-view></div>
 
 </body>
 </html>
