@@ -12,7 +12,7 @@ angular.module('todoApp', [])
     $scope.save = Note.addNote;
 
     $scope.cancel = function(){
-      $state.go('list');
+      $state.go('addNote');
     }
   })
 .controller('editCtrl', function($scope, $state,  $stateParams, Note) {
